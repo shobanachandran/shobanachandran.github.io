@@ -4,44 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shobana Jayakumar | Software Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --accent: #2563eb;
+    }
+    body.dark {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+    }
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #f4f6f8;
-      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
     }
     header {
-      background: #1f2937;
+      background: linear-gradient(135deg, var(--accent), #1e40af);
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
-    header h1 { margin: 0; font-size: 32px; }
-    header p { margin-top: 8px; font-size: 16px; }
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
+    header h1 { margin: 0; font-size: 34px; }
+    header p { margin-top: 10px; font-size: 17px; }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
     }
-    h2 { color: #1f2937; margin-bottom: 10px; }
+    .card {
+      background: var(--card);
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    h2 { margin-top: 0; color: var(--accent); }
     .skills span {
       display: inline-block;
-      background: #e5e7eb;
-      padding: 8px 12px;
-      border-radius: 20px;
+      background: rgba(37,99,235,0.1);
+      color: var(--accent);
+      padding: 8px 14px;
       margin: 6px;
+      border-radius: 20px;
       font-size: 14px;
     }
     ul { padding-left: 20px; }
+    .actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: white;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn:hover { opacity: 0.9; }
     footer {
       text-align: center;
-      padding: 20px;
-      color: #555;
+      padding: 25px;
+      font-size: 14px;
+      opacity: 0.8;
     }
-    a { color: #2563eb; text-decoration: none; }
+    .toggle {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 26px; }
+      .card { padding: 18px; }
+    }
   </style>
 </head>
 <body>
@@ -49,64 +103,74 @@
 <header>
   <h1>Shobana Jayakumar</h1>
   <p>Software Engineer | Web Developer | Software Trainer</p>
+  <div class="actions">
+    <a class="btn" href="Shobana_Jayakumar_Resume.pdf" download>
+      <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+    </a>
+    <a class="btn" href="https://www.linkedin.com/in/shobana-chandrasekar-719340105" target="_blank">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
 </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    Results-driven Software Engineer with 4+ years of experience in software development
-    and 2 years of experience as a Software Trainer. Skilled in web development,
-    database management, and building scalable applications. Strong communicator
-    with a positive and proactive attitude.
-  </p>
-</section>
+<div class="container">
 
-<section>
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <span>HTML</span>
-    <span>CSS (Bootstrap)</span>
-    <span>JavaScript</span>
-    <span>Angular</span>
-    <span>PHP (Laravel)</span>
-    <span>Node.js</span>
-    <span>Oracle</span>
-    <span>MS SQL</span>
-    <span>WordPress / WooCommerce</span>
-    <span>Linux</span>
-    <span>Windows Server</span>
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I am a results-driven Software Engineer with over 4 years of hands-on experience
+      in designing, developing, and maintaining web-based applications, along with
+      2 years of experience as a Software Trainer. I have a strong foundation in full‑stack
+      development, database management, and ERP systems. Known for my clear communication,
+      adaptability, and problem-solving mindset, I enjoy transforming complex requirements
+      into efficient, user-friendly solutions. I am passionate about continuous learning
+      and contributing to impactful, high-quality software products.
+    </p>
   </div>
-</section>
 
-<section>
-  <h2>Experience</h2>
-  <ul>
-    <li><strong>Software Engineer</strong> – IOrange Innovation (May 2023 – Present)</li>
-    <li><strong>Software Engineer</strong> – Byonz Ventures Pvt Ltd (Sep 2017 – Sep 2019)</li>
-    <li><strong>Software Trainer</strong> – CSC Computer Education (Jun 2013 – May 2014)</li>
-    <li><strong>Software Trainer</strong> – National Educational Trust (Jul 2012 – May 2013)</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>HTML</span><span>CSS (Bootstrap)</span><span>JavaScript</span><span>Angular</span>
+      <span>PHP (Laravel)</span><span>Node.js</span><span>Oracle</span><span>MS SQL</span>
+      <span>WordPress</span><span>Linux</span><span>Windows Server</span>
+    </div>
+  </div>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Dynamic Website with Email Integration</strong> – HTML, CSS, JavaScript, PHP</li>
-    <li><strong>Accounting Web Application</strong> – HTML, CSS, JS, Angular, Node.js</li>
-    <li><strong>E‑Commerce Website</strong> – LAMP, WordPress, WooCommerce</li>
-    <li><strong>ERP & Billing Software</strong> – PHP based business solutions</li>
-  </ul>
-</section>
+  <div class="card">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Software Engineer</strong> – IOrange Innovation (May 2023 – Present)</li>
+      <li><strong>Software Engineer</strong> – Byonz Ventures Pvt Ltd (Sep 2017 – Sep 2019)</li>
+      <li><strong>Software Trainer</strong> – CSC Computer Education (Jun 2013 – May 2014)</li>
+      <li><strong>Software Trainer</strong> – National Educational Trust (Jul 2012 – May 2013)</li>
+    </ul>
+  </div>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:shobishobas@gmail.com">shobishobas@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/shobanachandran" target="_blank">github.com/shobanachandran</a></p>
-</section>
+  <div class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li>Dynamic Website with Email Integration – HTML, CSS, JS, PHP</li>
+      <li>Accounting Web Application – Angular, Node.js</li>
+      <li>E-Commerce Website – WordPress, WooCommerce</li>
+      <li>ERP & Billing Software – PHP based solutions</li>
+    </ul>
+  </div>
 
-<footer>
-  © 2026 Shobana Jayakumar
-</footer>
+  <div class="card">
+    <h2>Contact</h2>
+    <p><i class="fa-solid fa-envelope"></i> shobishobas@gmail.com</p>
+    <p><i class="fa-brands fa-github"></i> github.com/shobanachandran</p>
+    <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/shobana-chandrasekar-719340105</p>
+  </div>
+
+</div>
+
+<footer>© 2026 Shobana Jayakumar</footer>
+
+<button class="toggle" onclick="document.body.classList.toggle('dark')">
+  <i class="fa-solid fa-moon"></i>
+</button>
 
 </body>
 </html>
